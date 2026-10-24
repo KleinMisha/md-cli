@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-md = "md_cli:main"
+md = "md.cli.entrypoint:main"
 
 
 [build-system]
