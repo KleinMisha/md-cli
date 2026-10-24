@@ -1,16 +1,17 @@
 [project]
 name = "md-cli"
 version = "0.1.0"
-description = "Add your description here"
+description = "View markdown files inside the terminal."
 readme = "README.md"
 authors = [
     { name = "KleinMisha", email = "klein.misha@gmail.com" }
 ]
-requires-python = ">=3.14"
+requires-python = ">=3.10"
 dependencies = []
 
 [project.scripts]
-md-cli = "md_cli:main"
+md = "md_cli:main"
+
 
 [build-system]
 requires = ["uv_build>=0.11.8,<0.12.0"]
