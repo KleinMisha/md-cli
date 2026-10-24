@@ -1,6 +1,6 @@
 [project]
 name = "md"
-version = "0.1.0"
+version = "1.0.0"
 description = "View markdown files inside the terminal."
 readme = "README.md"
 authors = [
