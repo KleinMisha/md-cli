@@ -1,5 +1,5 @@
 [project]
-name = "md-cli"
+name = "md"
 version = "0.1.0"
 description = "View markdown files inside the terminal."
 readme = "README.md"
@@ -7,7 +7,9 @@ authors = [
     { name = "KleinMisha", email = "klein.misha@gmail.com" }
 ]
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "typer>=0.27.3",
+]
 
 [project.scripts]
 md = "md_cli:main"
@@ -16,3 +18,21 @@ md = "md_cli:main"
 [build-system]
 requires = ["uv_build>=0.11.8,<0.12.0"]
 build-backend = "uv_build"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testspaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*", "*/__init__.py"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+]
+
